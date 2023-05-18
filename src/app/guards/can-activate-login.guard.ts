@@ -18,10 +18,12 @@ export class CanActivateLoginGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
+
     if (this.userService.seLogueo) {
       console.log('Usuario Logueado CanActivate');
       return true;
     }
+
     console.log('Usuario No Logueado CanActivate');
     this.swalService.crearSwal("DEBE LOGUEARSE PRIMERO", "Inicie sesión", 'warning').then
     {

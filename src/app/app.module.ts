@@ -16,6 +16,11 @@ import { ListadoPaisesComponent } from './components/listado-paises/listado-pais
 import { AltaProductoComponent } from './pages/alta-producto/alta-producto.component';
 import { FormAltaProductoComponent } from './components/form-alta-producto/form-alta-producto.component';
 import { AngularFireModule } from '@angular/fire/compat';
+import { ProductoDetalleComponent } from './pages/producto-detalle/producto-detalle.component';
+import { ListadoProductoComponent } from './components/listado-producto/listado-producto.component';
+import { ListadoPublicoComponent } from './components/listado-publico/listado-publico.component';
+import { InformacionProductoComponent } from './components/informacion-producto/informacion-producto.component';
+import { InformacionPaisComponent } from './components/informacion-pais/informacion-pais.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +30,13 @@ import { AngularFireModule } from '@angular/fire/compat';
     NavbarComponent,
     AltaProductoComponent,
     ListadoPaisesComponent,
-    FormAltaProductoComponent
+    FormAltaProductoComponent,
+    ProductoDetalleComponent,
+    ListadoProductoComponent,
+    ListadoPublicoComponent,
+    InformacionProductoComponent,
+    InformacionPaisComponent,
+    ListadoProductoComponent
   ],
   imports: [
     BrowserModule,

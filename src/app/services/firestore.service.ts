@@ -8,7 +8,7 @@ import { Producto } from '../clase/producto';
 })
 export class FirestoreService {
 
-  constructor(private angularFirestore: AngularFirestore, private firestoreService:Firestore) { 
+  constructor(private angularFirestore: AngularFirestore, private firestoreService: Firestore) {
   }
 
   guardar(producto: Producto) {
@@ -25,5 +25,8 @@ export class FirestoreService {
       }
     );
   }
-
+  traer() {
+    const collection = this.angularFirestore.collection<any>('productos');
+    return collection.valueChanges();
+  }
 }

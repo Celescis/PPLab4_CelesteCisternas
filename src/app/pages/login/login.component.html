@@ -8,8 +8,8 @@
                     <h6 class="text-center" style="font-size: 30px;">Ingrese sus datos</h6>
                     <div class="form-outline mb-4 user-box group log-input" style="background-color: #d3b6b6;">
                         <label for="correo" class="form-label">Correo</label>
-                        <input type="text" class="form-control" name="correo" placeholder="Ingresar correo" value="" required
-                            [(ngModel)]="correo" (blur)="validarCorreo()"
+                        <input type="text" class="form-control" name="correo" placeholder="Ingresar correo" value=""
+                            required [(ngModel)]="correo" (blur)="validarCorreo()"
                             [ngClass]="{'is-invalid': !correoValido, 'is-valid': correoValido}">
 
                         <div class="invalid-feedback" *ngIf="correo.length > 0">
@@ -22,8 +22,8 @@
 
                     <div class="form-outline mb-4 user-box group log-input" style="background-color: #d3b6b6;">
                         <label for="password" class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" name="password" placeholder="Ingresar contraseña" value="" required
-                            [(ngModel)]="password" (blur)="validarPass()"
+                        <input type="password" class="form-control" name="password" placeholder="Ingresar contraseña"
+                            value="" required [(ngModel)]="password" (blur)="validarPass()"
                             [ngClass]="{'is-invalid': !passValido, 'is-valid': passValido}">
                         <div class="invalid-feedback" *ngIf="password.length > 0">
                             Ingrese una contraseña válida
