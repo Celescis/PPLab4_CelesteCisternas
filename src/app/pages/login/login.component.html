@@ -1,0 +1,49 @@
+<section class="h-100 gradient-form" style="background-color: black; width: 100%; position: fixed;">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100 mt-3">
+
+            <div class="col-lg-6" style="background-color: #d3b6b6;">
+                <div class="card-body p-md-5 mx-md-4">
+
+                    <h6 class="text-center" style="font-size: 30px;">Ingrese sus datos</h6>
+                    <div class="form-outline mb-4 user-box group log-input" style="background-color: #d3b6b6;">
+                        <label for="correo" class="form-label">Correo</label>
+                        <input type="text" class="form-control" name="correo" placeholder="Ingresar correo" value="" required
+                            [(ngModel)]="correo" (blur)="validarCorreo()"
+                            [ngClass]="{'is-invalid': !correoValido, 'is-valid': correoValido}">
+
+                        <div class="invalid-feedback" *ngIf="correo.length > 0">
+                            Ingrese un correo válido
+                        </div>
+                        <div class="valid-feedback">
+                            Correo válido
+                        </div>
+                    </div>
+
+                    <div class="form-outline mb-4 user-box group log-input" style="background-color: #d3b6b6;">
+                        <label for="password" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" name="password" placeholder="Ingresar contraseña" value="" required
+                            [(ngModel)]="password" (blur)="validarPass()"
+                            [ngClass]="{'is-invalid': !passValido, 'is-valid': passValido}">
+                        <div class="invalid-feedback" *ngIf="password.length > 0">
+                            Ingrese una contraseña válida
+                        </div>
+                        <div class="valid-feedback">
+                            Contraseña válido
+                        </div>
+                    </div>
+
+                    <div class="text-center pt-1 mb-4 pb-1 botonIngresar">
+                        <button (click)="login()" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3 "
+                            type="button">Ingresar</button>
+                        <button (click)="seleccionarUsuario(1)" type="button"
+                            class="btn btn-danger btn-block fa-lg gradient-custom-2 mb-3 ">Administrador</button>
+                        <button (click)="seleccionarUsuario(2)" type="button"
+                            class="btn btn-success btn-block fa-lg gradient-custom-2 mb-3">Empleado</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

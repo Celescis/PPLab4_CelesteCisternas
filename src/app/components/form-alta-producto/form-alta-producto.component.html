@@ -1,0 +1,78 @@
+<div class="container">
+    <main>
+      <div class="col-md-7 col-lg-8">
+        <form [formGroup]="form" (ngSubmit)="guardar()">
+          <div class="row g-3">
+  
+            <div class="col-sm-6">
+              <div>
+                <label for="codigo" class="form-label" style="font-weight: bolder;color:#0e88b8">Código</label>
+                <input type="number" formControlName="codigo" class="form-control" required />
+                <small style="color: rgb(226, 53, 53);"
+                  *ngIf="form.controls['codigo'].errors?.['required'] && form.controls['codigo'].touched">
+                  Ingrese un codigo
+                </small>
+              </div>
+
+              <div>
+                <label for="descripcion" class="form-label" style="font-weight: bolder;color:#0e88b8">Descripción</label>
+                <input type="text" class="form-control" formControlName="descripcion" required />
+                <small style="color: rgb(226, 53, 53);"
+                  *ngIf="form.controls['descripcion'].errors?.['required'] && form.controls['descripcion'].touched">
+                  Ingresar una descripcion
+                </small>
+              </div>
+            </div>
+  
+            <div class="col-sm-6">
+              <div>
+                <label for="precio" class="form-label" style="font-weight: bolder;color:#0e88b8">Precio</label>
+                <input type="number" formControlName="precio" class="form-control" required />
+                <small style="color: rgb(226, 53, 53);"
+                  *ngIf="form.controls['precio'].errors?.['required'] && form.controls['precio'].touched">
+                  Ingrese un precio
+                </small>
+              </div>
+  
+              <div>
+                <label for="stock" class="form-label" style="font-weight: bolder;color:#0e88b8">Stock</label>
+                <input type="number" formControlName="stock" class="form-control" required />
+                <small style="color: rgb(226, 53, 53);"
+                  *ngIf="form.controls['stock'].errors?.['required'] && form.controls['stock'].touched">
+                  Ingrese el stock
+                </small>
+              </div>
+            </div>
+  
+            <div class="col-sm-6">
+              <label for="comestible" class="form-label" style="font-weight: bolder; color:#0e88b8">¿Es comestible? </label><br />
+              <select id="comestible" formControlName="comestible" required>
+                <option value="">Seleccione uno</option>
+                <option value="si">Si</option>
+                <option value="no">No</option>
+              </select>
+              <br />
+              <small style="color: rgb(226, 53, 53);"
+                *ngIf="form.controls['comestible'].errors?.['required'] && form.controls['comestible'].touched">
+                Seleccionar si es comestible
+              </small>
+            </div>
+  
+            <div class="col-sm-6">
+              <label for="paisOrigen" class="form-label" style="font-weight: bolder;color:#0e88b8">País Origen</label>
+              <input type="text" readonly class="form-control"
+                [value]="paisRecibido?.name.common" />
+              <br />
+            </div>
+            <hr class="my-4" />
+  
+            <button class="w-100 btn btn-lg" type="submit"
+              style="color: #000000; background-color: #0e88b8; font-weight: bolder;">
+              Guardar
+            </button>
+          </div>
+        </form>
+      </div>
+  
+    </main>
+  </div>

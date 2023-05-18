@@ -1,0 +1,24 @@
+<div class="background-image">
+    <div class="box">
+        <div class="glass"></div>
+        <div class="content">
+            <div class="profile-cover">
+                <h2>BIENVENIDO</h2>
+                <div class="profile-avatar">
+                    <a href="{{perfil?.html_url}}" target="_blank">GitHub>
+                        <img [src]="perfil?.avatar_url" ></a>
+                </div>
+        
+
+                <div class="profile-details">
+                    <h1>{{perfil?.name}}</h1>
+                    <h2>@{{perfil?.login}}</h2>
+                    <h4>{{perfil?.location}}</h4>
+                    <h6>{{perfil?.bio}}</h6>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
