@@ -6,8 +6,11 @@ import { AltaProductoComponent } from './pages/alta-producto/alta-producto.compo
 import { CanActivateLoginGuard } from './guards/can-activate-login.guard';
 import { ProductoDetalleComponent } from './pages/producto-detalle/producto-detalle.component';
 import { ListadoPublicoComponent } from './components/listado-publico/listado-publico.component';
+import { ABMContainerComponent } from './pages/abmcontainer/abmcontainer.component';
+import { CanActivateAdministradorGuard } from './guards/can-activate-administrador.guard';
 
 const routes: Routes = [
+  { path: 'abmcontainer', component: ABMContainerComponent, canActivate: [CanActivateAdministradorGuard] },
   { path: 'listado-publico', component: ListadoPublicoComponent },
   { path: 'producto-detalle', component: ProductoDetalleComponent, canActivate: [CanActivateLoginGuard] },
   { path: 'alta-producto', component: AltaProductoComponent, canActivate: [CanActivateLoginGuard] },

@@ -29,6 +29,10 @@
           <li><a class="dropdown-item" routerLink="/listado-publico">Listado Publico</a></li>
         </ul>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/abmcontainer">Container</a>
+      </li>
+
     </ul>
     <button *ngIf="userService.seLogueo" class="btn btn-outline-danger" (click)="cerrar()">Cerrar Sesión</button>
   </div>

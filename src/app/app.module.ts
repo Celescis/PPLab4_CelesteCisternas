@@ -21,6 +21,9 @@ import { ListadoProductoComponent } from './components/listado-producto/listado-
 import { ListadoPublicoComponent } from './components/listado-publico/listado-publico.component';
 import { InformacionProductoComponent } from './components/informacion-producto/informacion-producto.component';
 import { InformacionPaisComponent } from './components/informacion-pais/informacion-pais.component';
+import { ABMContainerComponent } from './pages/abmcontainer/abmcontainer.component';
+import { ListaContainerComponent } from './components/lista-container/lista-container.component';
+import { CrearContainerComponent } from './components/crear-container/crear-container.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,10 @@ import { InformacionPaisComponent } from './components/informacion-pais/informac
     ListadoPublicoComponent,
     InformacionProductoComponent,
     InformacionPaisComponent,
-    ListadoProductoComponent
+    ListadoProductoComponent,
+    ABMContainerComponent,
+    ListaContainerComponent,
+    CrearContainerComponent
   ],
   imports: [
     BrowserModule,
